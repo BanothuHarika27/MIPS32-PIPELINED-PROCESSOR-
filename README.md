@@ -28,12 +28,15 @@ A Verilog HDL implementation of a **32-bit MIPS-style pipelined processor** feat
 The processor fetches, decodes, executes, accesses memory, and writes back results through separate pipeline stages, allowing multiple instructions to be processed simultaneously.
 
 Instruction Categories
-Category	Instructions
-R-Type ALU	ADD, SUB, AND, OR, SLT, MUL
-Immediate ALU	ADDI, SUBI, SLTI
-Memory	LW, SW
-Branch	BEQZ, BENQZ
-Control	HLT
+### Instruction Categories
+
+| Category      | Instructions                |
+|---------------|-----------------------------|
+| R-Type ALU    | ADD, SUB, AND, OR, SLT, MUL |
+| Immediate ALU | ADDI, SUBI, SLTI            |
+| Memory        | LW, SW                      |
+| Branch        | BEQZ, BENQZ                 |
+| Control       | HLT                         |
 Key Design Concepts
 Pipeline registers for transferring data and control information between stages.
 Sign extension of 16-bit immediate operands to 32 bits.
