@@ -1,5 +1,5 @@
 module pipe_MIPS32 (clk1, clk2);
-
+ 
 input clk1,clk2;    // Two phase clock
 
 reg[31:0] PC, IF_ID_IR, IF_ID_NPC;                            //Program Counter and Intermediate Latches 
