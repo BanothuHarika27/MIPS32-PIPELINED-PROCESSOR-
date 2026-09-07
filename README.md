@@ -1,5 +1,5 @@
 # MIPS32 Pipelined Processor in Verilog
-
+ 
 A Verilog HDL implementation of a **32-bit MIPS-style pipelined processor** featuring a classic **five-stage pipeline architecture**: Instruction Fetch (IF), Instruction Decode (ID), Execute (EX), Memory Access (MEM), and Write Back (WB).
 
 ### Features
