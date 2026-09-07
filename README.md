@@ -20,14 +20,14 @@ A Verilog HDL implementation of a **32-bit MIPS-style pipelined processor** feat
 ### Pipeline Architecture
 
 ```text
-        +-----+       +-----+       +-----+       +-----+       +-----+
-        | IF  | ----> | ID  | ----> | EX  | ----> | MEM | ----> | WB  |
-        +-----+       +-----+       +-----+       +-----+       +-----+
-        Fetch          Decode       Execute       Memory       Write Back
++-----+       +-----+       +-----+       +-----+       +-----+
+| IF  | ----> | ID  | ----> | EX  | ----> | MEM | ----> | WB  |
++-----+       +-----+       +-----+       +-----+       +-----+
+ Fetch          Decode       Execute       Memory       Write Back
+```
 
 The processor fetches, decodes, executes, accesses memory, and writes back results through separate pipeline stages, allowing multiple instructions to be processed simultaneously.
 
-Instruction Categories
 ### Instruction Categories
 
 | Category      | Instructions                |
@@ -37,12 +37,12 @@ Instruction Categories
 | Memory        | LW, SW                      |
 | Branch        | BEQZ, BENQZ                 |
 | Control       | HLT                         |
-Key Design Concepts
-Pipeline registers for transferring data and control information between stages.
-Sign extension of 16-bit immediate operands to 32 bits.
-ALU-based address generation for load/store operations.
-Conditional branch target calculation and branch control.
-Separate handling of register-register and register-immediate operations.
-Two-phase clocking to coordinate the different pipeline stages.
 
-This project demonstrates the design and implementation of a basic pipelined CPU datapath in Verilog, providing practical understanding of processor architecture, instruction execution, pipelining, register files, memory interfacing, and control logic.
+### Key Design Concepts
+
+- Pipeline registers for transferring data and control information between stages.
+- Sign extension of 16-bit immediate operands to 32 bits.
+- ALU-based address generation for load/store operations.
+- Conditional branch target calculation and branch control.
+- Separate handling of register-register and register-immediate operations.
+- Two-phase clocking to coordinate the different pipeline stages.
